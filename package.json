@@ -1,0 +1,14 @@
+{
+  "name": "sqlitetest",
+  "version": "1.0.0",
+  "description": "Testing sqlite with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wilber Castaneda",
+  "license": "ISC",
+  "devDependencies": {
+    "sqlite3": "^4.0.2"
+  }
+}
