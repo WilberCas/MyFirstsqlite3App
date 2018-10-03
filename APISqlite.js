@@ -30,4 +30,17 @@ app.get('/id/:reqIds', function (req, response) {
 
   })
 
+  // GET Method
+// Retrives the playlist selected
+app.get('/id/', function (req, response) {
+  // Doing the databaseCall
+  db.all(`SELECT * FROM playlists `,(err, res) => {
+      if (err) {
+      console.error(err.message);
+      }
+      response.send(res);
+})
+
+})
+
 app.listen(port, () => console.log(`App listening on port ${port}!` ));
