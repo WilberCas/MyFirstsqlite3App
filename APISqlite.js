@@ -3,6 +3,12 @@ const app = express();
 const port = 3001;
 const sqlite3 = require('sqlite3');
 
+// Required to make API calls locally
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+})
 // Connection to the sqlite3 database
 let db= new sqlite3.Database('./db/chinook.db', (err) => {
 	if (err) { return console.error(err.message);}
